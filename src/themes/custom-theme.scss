@@ -1,6 +1,6 @@
 // ----------------------------------------------------------
 // GLOBAL TOKENS
-// Custom Theme
+// Theme Soft Blue
 // ----------------------------------------------------------
 
 @layer theme {
@@ -8,30 +8,71 @@
     // --------------------------------------------------------
     // Colors (Branding Core)
     // --------------------------------------------------------
-    --fs-color-main-0: #f1f2f3;
+
+    // PALETTE
+    --fs-color-main-0: #cca535a1;
+    --fs-color-main-1: #cca535a1;
+    --fs-color-main-2: #b80652;
+    --fs-color-main-3: #b2346aa3;
+    --fs-color-main-4: #b2346aa3;
+
+    --fs-color-accent-0: #b80652;
+    --fs-color-accent-1: #cca535a1;
+    --fs-color-accent-2: #cca535a1;
+    --fs-color-accent-3: #cca535a1;
+    --fs-color-accent-4: #cca535a1;
+
+    // HIERARCHY
+    --fs-color-primary-bkg: var(--fs-color-main-4);
+    --fs-color-primary-bkg-active: var(--fs-color-main-2);
+    --fs-color-primary-bkg-light: var(--fs-color-main-0);
+    --fs-color-primary-bkg-light-active: var(--fs-color-main-1);
+
+    // SITUATIONS
+    --fs-color-success-bkg: #b80652;
+    --fs-color-warning-bkg: #cca535a1;
+
+    // COMPONENTS & STATES
+    --fs-color-text-display: var(--fs-color-main-4);
+
+    --fs-color-action-bkg: var(--fs-color-accent-3);
+    --fs-color-action-bkg-hover: var(--fs-color-accent-2);
+    --fs-color-action-bkg-active: var(--fs-color-accent-1);
+
     // --------------------------------------------------------
     // Typography (Branding Core)
     // --------------------------------------------------------
 
-    // --------------------------------------------------------
-    // Spacing (UI Essentials)
-    // --------------------------------------------------------
-
-    // --------------------------------------------------------
-    // Grid & Layout (UI Essentials)
-    // --------------------------------------------------------
-
-    // --------------------------------------------------------
-    // Interactive Controls (UI Essentials)
-    // --------------------------------------------------------
+    // FACE
+    --fs-text-face-body: 'Lato', -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
 
     // --------------------------------------------------------
     // Refinements
     // --------------------------------------------------------
 
+    // BORDERS
+    --fs-border-radius: 0.25rem;
+
+    // SHADOW
+    --fs-shadow: none;
+    --fs-shadow-darker: 0 0 10px rgb(0 0 0 / 20%);
+    --fs-shadow-hover: 0 1px 4px rgb(0 0 0 / 10%), 0 6px 8px rgb(0 0 0 / 10%);
+
     // --------------------------------------------------------
     // FS UI Components
     // --------------------------------------------------------
     // Add here the customizations for FastStore UI components.
+
+    --fs-logo-width: 8rem;
+
+    [data-fs-product-card] {
+      --fs-product-card-border-color: transparent;
+      --fs-product-card-border-color-hover: var(--fs-border-color-light);
+
+      &[data-fs-product-card-bordered='true'] {
+        --fs-product-card-border-color: var(--fs-border-color-light);
+      }
+
+    }
   }
 }
